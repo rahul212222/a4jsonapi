@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE comparisons [
+  <!ELEMENT comparisons (hotel*)>
+  <!ELEMENT hotel (name,stars,reviews,score)>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT stars (#PCDATA)>
+  <!ELEMENT reviews (#PCDATA)>
+  <!ELEMENT score (#PCDATA)>
+  <!ATTLIST comparisons date CDATA #REQUIRED>
+  <!ATTLIST comparisons location CDATA #REQUIRED>
+  <!ATTLIST comparisons company CDATA #REQUIRED>
+  <!ATTLIST comparisons url CDATA #REQUIRED>
+]>
+<comparisons date="2021-02-25" location="Wollongong" company="Hotels Combined" url="https://www.hotelscombined.com.au">
+   <hotel>
+      <name>Novotel Wollongong Northbeach</name>
+      <stars>4</stars>
+      <reviews>3123</reviews>
+      <score>8.1</score>
+   </hotel>
+   <hotel>
+      <name>Sage Hotel Wollongong</name>
+      <stars>4</stars>
+      <reviews>3802</reviews>
+      <score>7.8</score>
+   </hotel>
+   <hotel>
+      <name>Adina Apartment Hotel Wollongong</name>
+      <stars>4</stars>
+      <reviews>1046</reviews>
+      <score>8.7</score>
+   </hotel>
+   <hotel>
+      <name>Quality Suites Pioneer Sands</name>
+      <stars>4</stars>
+      <reviews>656</reviews>
+      <score>8.6</score>
+   </hotel>
+   <hotel>
+      <name>Mantra Wollongong</name>
+      <stars>4</stars>
+      <reviews>1052</reviews>
+      <score>7.6</score>
+   </hotel>
+   <hotel>
+      <name>The Belmore All-Suite Hotel</name>
+      <stars>3</stars>
+      <reviews>1214</reviews>
+      <score>8.8</score>
+   </hotel>
+   <hotel>
+      <name>Boat Harbour Motel</name>
+      <stars>3</stars>
+      <reviews>869</reviews>
+      <score>8.0</score>
+   </hotel>
+   <hotel>
+      <name>Solomon Inn Wollongong</name>
+      <stars>3</stars>
+      <reviews>731</reviews>
+      <score>7.3</score>
+   </hotel>
+   <hotel>
+      <name>Best Western City Sands</name>
+      <stars>4</stars>
+      <reviews>1219</reviews>
+      <score>8.3</score>
+   </hotel>
+   <hotel>
+      <name>Flinders Motel</name>
+      <stars>3</stars>
+      <reviews>701</reviews>
+      <score>7.4</score>
+   </hotel>
+</comparisons>
