@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+             table.GeneratedTable{
+         background-color: #ffffff;
+         border-collapse: collapse;
+         border-width: 1px;
+         border-style: outset;
+         color: #000000;
+         margin: auto;
+         }
+         table.GeneratedTable td, table.GeneratedTable th {
+         font-size:20px ;
+         padding: 10px;
+         border-style: solid;
+         border-width: 1px;
+         border-color: #808080;     
+         box-shadow: 1px solid #808080;
+         }
+         table.GeneratedTable thead {
+         background-color: #a8a8a8;
+         }
+         tr:nth-child(even){
+         background-color: #e0e0e0;
+         border-style: solid 1px;
+         }
+         .cntr{            
+         text-align: center; 
+         }  
+         #bel8{
+         background-color: #ff9999;
+         } 
+         #bel85{
+         background-color: #ffdb99;
+         }  
+         #otherwise{
+         background-color: #99cc99;
+         }
+         </style>
+
+
+         <script>
+             function loadDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function()
+                 {
+                if (this.readyState == 4 && this.status == 200) 
+                {
+                myFunction(this);
+                }
+                 };
+             xhttp.open("GET", "A4.xml", true);
+             xhttp.send();
+             }
+             function myFunction(xml) {
+             var i;
+             var xmlDoc = xml.responseXML;
+             var table="<tr><th>hotel name</th><th>stars</th></tr>";
+             var x = xmlDoc.getElementsByTagName("hotel");
+             for (i = 0; i <x.length; i++) {
+             table += "<tr><td>" +
+             x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+             "</td><td>" +
+             x[i].getElementsByTagName("stars")[0].childNodes[0].nodeValue +
+              "</td></tr>";
+            }
+  document.getElementById("demo").innerHTML = table;
+}
+         </script>
